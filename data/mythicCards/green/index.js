@@ -1,4 +1,4 @@
-import {default as greenCardsAssets} from '/assets/MythicCards/green/index.js';
+import {default as greenCardsAssets} from '../../../assets/MythicCards/green/index.js';
 
 const cardsData = [
   {

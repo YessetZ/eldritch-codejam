@@ -1,16 +1,24 @@
 const difficulties = [
   {
-    id: 'easy',
-    name: 'Низкая'
+    id: 'super-easy',
+    name: 'super-easy'
   },
   {
-    id: 'normal',
-    name: 'Средняя'
+    id: 'easy',
+    name: 'easy'
+  },
+  {
+    id: 'medium',
+    name: 'medium'
   },
   {
     id: 'hard',
-    name: 'Высокая'
+    name: 'hard'
   },
+  {
+    id: 'super-hard',
+    name: 'super-hard'
+  }
 ]
 
 export default difficulties

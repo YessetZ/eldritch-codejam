@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldritch Game</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" class="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" class="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="ancients">
+            <label for="ancients">Ancients: </label>
+            <br><br>
+            <select name="ancients" id="ancients" onchange="document.getElementById('ancientImg').src = this.value">
+                <option selected disabled>Pick an ancient: </option>
+                <option value="./assets/Ancients/Azathoth.png">Azathoth</option>
+                <option value="./assets/Ancients/Cthulthu.png">Cthulthu</option>
+                <option value="./assets/Ancients/IogSothoth.png">IogSothoth</option>
+                <option value="./assets/Ancients/ShubNiggurath.png">ShubNiggurath</option>
+            </select>
+            <br><br>
+            <img id="ancientImg" alt="Pick an Ancient">
+        </div>
+        <div class="levels">
+            <form name="level" action="/index.html" onsubmit="return jsMethod()">
+                <label for="levels">Choose Level: </label>
+                <br><br>
+                <select name="levels" id="levels" size="5">
+                    <option value="super-easy">Super Easy</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="super-hard">Super Hard</option>
+                </select>
+                <br><br>
+            </form>
+            <button class="play-button" id="shuffle-button">Shuffle</button>
+        </div>
+        <div class="cards">
+            <label for="ancients">Cards: </label>
+            <br><br>
+            <h3>Stage 1</h3><br>
+            <div class="card-numbers" id="stage1">
+                <p class="green" id="stage1-green">0</p>
+                <p class="brown" id="stage1-brown">0</p>
+                <p class="blue" id="stage1-blue">0</p>
+            </div>
+            <br><br>
+            <h3>Stage 2</h3><br>
+            <div class="card-numbers" id="stage2">
+                <p class="green" id="stage2-green">0</p>
+                <p class="brown" id="stage2-brown">0</p>
+                <p class="blue" id="stage2-blue">0</p>
+            </div>
+            <br><br>
+            <h3>Stage 3</h3><br>
+            <div class="card-numbers" id="stage3">
+                <p class="green" id="stage3-green">0</p>
+                <p class="brown" id="stage3-brown">0</p>
+                <p class="blue" id="stage3-blue">0</p>
+            </div>
+            <br><br>
+            <button class="play-button" id="next-card">Next Card</button>
+        </div>
+        <div class="card-img">
+            <p"><span id="card-name"></span> - <span id="card-color"></span> - <span id="card-difficulty"></span></p>
+            <br>
+            <img id="card-img" src="" alt="card-img">
+        </div>
+    </div>
+</body>
+<script type="module" src="/shuffle.js"></script>
+</html>
